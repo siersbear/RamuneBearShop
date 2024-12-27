@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #dff0ff;
+}
+/*NAVBAR*/
+#ts-navbar {
+    background-color: #dc604f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#ts-navbar a {
+    text-decoration: none;
+    color: #f9f3ab;
+    padding: 24px;
+}
+#logo {
+    display: flex;
+}
+#logo:hover {
+    transform: scale(150%);
+    transition: transform .5s;
+}
+#ts-navbar img {
+    width: 100px;
+}
+#ts-navbar #logo {
+    margin-right: auto;
+}
+#header {
+    position: sticky;
+    top: 0px;
+}
+#ts-navbar-top p{
+    text-decoration: none;
+    color: #DCC8D8;
+    padding: 5px 36px;
+}
+#ts-navbar-bottom {
+    background-color: #6f96cc;
+    display: flex;
+    justify-content: center;
+}
+#ts-navbar-bottom a{
+    text-decoration: none;
+    text-align: center;
+    color: #f9f3ab;
+    padding: 5px 36px;
+    margin: 10px;
+}
+#ts-navbar-bottom a:hover{
+    color: #dc604f;
+    transform: scale(150%);
+    transition: transform .5s;
+}
+/*HOMEPAGE*/
+#homepage {
+    display: flex;
+}
+#banner {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#banner #design1{
+    width: 35vw;
+    margin: 15px;
+}
