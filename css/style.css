@@ -5,6 +5,7 @@ body {
     margin: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #dff0ff;
+    color: #474e4a;
 }
 /*NAVBAR*/
 #ts-navbar {
@@ -60,6 +61,9 @@ body {
 /*HOMEPAGE*/
 #homepage {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 #banner {
     display: flex;
@@ -69,6 +73,89 @@ body {
     text-align: center;
 }
 #banner #design1{
-    width: 35vw;
-    margin: 15px;
+    width: 15vw;
+}
+#ribbon {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#homepage a img {
+    width: 3vw;
+    margin: 10px;
+}
+#homepage a img:hover {
+    transform: scale(140%);
+    transition: 
+        transform .5s
+    ;
+}
+#homepage marquee {
+    color:#dc604f;
+    margin: 5px;
+}
+/*TOS*/
+#layout {
+    margin: 20px;
+}
+#layout h2, h3 {
+    color: #6f96cc;
+}
+#layout h1 {
+    font-weight: bolder;
+    color:#dc604f ;
+    text-transform: uppercase;
+}
+.middle {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    border:#f9f3ab;
+}
+/*ARTWORK*/
+#artwork {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#images {
+    border: 10px dotted #dc604f;
+    padding: 20px;
+    justify-content:baseline;
+    align-items: center;
+    text-align: center;
+}
+#images #ramune {
+    width: 14vw;
+}
+#images #who {
+    width: 45vw;
+}
+#images .art {
+    padding: 30px;
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+}
+/*SOCIALS*/
+#icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#icons a:hover {
+    transform: rotate(360deg);
+    transition: transform .5s;
+}
+#icons a:active {
+    transform: scale(800%);
+    transition: transform .4s;
 }
