@@ -93,6 +93,12 @@ body {
         transform .5s
     ;
 }
+#homepage a img:active {
+    transform:translateY(-500px);
+    transition: 
+        transform .5s
+    ;
+}
 #homepage marquee {
     color:#dc604f;
     margin: 5px;
