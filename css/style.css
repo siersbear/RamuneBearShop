@@ -42,7 +42,7 @@ body {
     padding: 5px 36px;
 }
 #ts-navbar-bottom {
-    background-color: #6f96cc;
+    background-color: #5ea6ff;
     display: flex;
     justify-content: center;
 }
@@ -94,7 +94,7 @@ body {
     ;
 }
 #homepage a img:active {
-    transform:translateY(-500px);
+    transform:translateY(-530px);
     transition: 
         transform .5s
     ;
@@ -102,6 +102,23 @@ body {
 #homepage marquee {
     color:#dc604f;
     margin: 5px;
+}
+#homepage h1 {
+    color: #5ea6ff;
+}
+#homepage #shopstatus h1 {
+    color: #dc604f
+}
+#homepage #shopstatus .shopimage img{
+    width: 35vw;
+    padding: 20px;
+}
+#homepage #shopstatus {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px dotted #5ea6ff
 }
 /*TOS*/
 #layout {
@@ -124,7 +141,7 @@ body {
 }
 /*ARTWORK*/
 #artwork {
-    width: 50vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -143,10 +160,11 @@ body {
 }
 #images #who {
     width: 45vw;
+    padding-bottom: 180px;
 }
 #images .art {
     padding: 30px;
-    width: 40%;
+    width: 30%;
     height: 100%;
     object-fit: contain;
 }
