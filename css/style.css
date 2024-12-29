@@ -94,7 +94,7 @@ body {
     ;
 }
 #homepage a img:active {
-    transform:translateY(-530px);
+    transform:translateY(-490px);
     transition: 
         transform .5s
     ;
@@ -111,10 +111,13 @@ body {
 }
 #homepage #shopstatus .shopimage img{
     width: 35vw;
-    padding: 20px;
+}
+#homepage #shopstatus .shopimage img{
+    width: 35vw;
 }
 #homepage #shopstatus {
     margin: 40px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,4 +185,50 @@ body {
 #icons a:active {
     transform: scale(800%);
     transition: transform .4s;
+}
+/*FOOTER*/
+#footer {
+    position: relative;
+    margin-bottom: -100px;
+    clear: both;
+    bottom: 0;
+    background-color: #5ea6ff;
+}
+#footer h2 {
+    color: #f9f3ab;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 40px;
+    text-align: left;
+    justify-content: left;
+}
+#footer hr {
+    background-color: #dc604f;
+    border: 1px solid #dc604f;
+    height: 3px;
+    margin: 0px 20px;
+}
+#footer .social-media {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+}
+.social-media li {
+    padding: 5px 0px;
+}
+#footer a{
+    color:  #f9f3ab;
+    text-decoration: none;
+}
+#cashapp {
+    width: 10vw;
+}
+#support {
+    color: #f9f3ab;
+}
+#links {
+    text-align: right;
 }
