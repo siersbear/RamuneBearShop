@@ -4,7 +4,7 @@
 body {
     margin: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #dff0ff;
+    background-color: #b2d9ff;
     color: #474e4a;
 }
 /*NAVBAR*/
@@ -65,14 +65,14 @@ body {
     justify-content: center;
     text-align: center;
 }
-#banner {
+#homebanner {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
-#banner #design1{
+#homebanner #design1{
     width: 15vw;
 }
 #ribbon {
@@ -87,14 +87,14 @@ body {
     width: 3vw;
     margin: 10px;
 }
-#homepage a img:hover {
+#homepage #shop img:hover {
     transform: scale(140%);
     transition: 
         transform .5s
     ;
 }
-#homepage a img:active {
-    transform:translateY(-490px);
+#homepage #shop img:active {
+    transform:translateY(-480px);
     transition: 
         transform .5s
     ;
@@ -143,7 +143,7 @@ body {
     border:#f9f3ab;
 }
 /*ARTWORK*/
-#artwork {
+#banner {
     width: 40vw;
     display: flex;
     flex-direction: column;
@@ -231,4 +231,60 @@ body {
 }
 #links {
     text-align: right;
+}
+#links li a:hover {
+    color: #dc604f;
+    padding-right: 30px;
+    transition: 
+        color .5s,
+        padding-right .5s
+    ;
+}
+#links #bearhead img {
+    width: 7vw;
+    margin: 5px;
+}
+#links #bearhead img:hover {
+    transform: rotate(360deg);
+    transition: transform .5s;
+}
+/*STICKERS*/
+#stickers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+#stickers img {
+    width: 30vw;
+    margin: 10px;
+}
+/*PINS*/
+#pins {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+#pins img {
+    width: 30vw;
+    margin: 10px;
+}
+/*SHIRTS*/
+#shirts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+#shirts img {
+    width: 30vw;
+    margin: 10px;
+}
+/*SHIRTS*/
+#misc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+#misc img {
+    width: 30vw;
+    margin: 10px;
 }
