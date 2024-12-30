@@ -109,6 +109,9 @@ body {
 #homepage #shopstatus h1 {
     color: #dc604f
 }
+#homepage .shopstatus {
+    padding-left: 95px;
+}
 #homepage #shopstatus .shopimage img{
     width: 35vw;
 }
@@ -185,6 +188,26 @@ body {
 #icons a:active {
     transform: scale(800%);
     transition: transform .4s;
+}
+#gofundme {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#gofundme a:hover {
+    transform: rotate(360deg);
+    transition: transform .5s;
+}
+#gofundme a:active {
+    transform: scale(800%);
+    transition: transform .4s;
+}
+#layout hr {
+    background-color: #dc604f;
+    border: 1px dotted #dc604f;
+    height: 1px;
+    margin: 10px 20px;
 }
 /*FOOTER*/
 #footer {
