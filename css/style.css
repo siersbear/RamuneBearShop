@@ -14,7 +14,7 @@ body {
     top: 0;
 }
 #ts-navbar {
-    background-color: #dc604f;
+    background-color: #dc5f4f;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,10 +131,6 @@ body {
     align-items: center;
     border: 10px dotted #5ea6ff
 }
-#newcollection {
-    background-color: #dc604f;
-    border: #f9f3ab dashed 10px;
-}
 #newcollection p {
     color:#f9f3ab;
 }
@@ -144,6 +140,11 @@ body {
 #newcollection a img:hover{
     width: 17vw;
     transition: width .5s;
+}
+#bearhr {
+    justify-content: center;
+    width: 100vw;
+    padding: 15px 5px;
 }
 /*TOS*/
 #layout {
