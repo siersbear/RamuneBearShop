@@ -8,6 +8,11 @@ body {
     color: #474e4a;
 }
 /*NAVBAR*/
+#header {
+    z-index: 1100;
+    position: fixed;
+    top: 0;
+}
 #ts-navbar {
     background-color: #dc604f;
     display: flex;
@@ -126,6 +131,20 @@ body {
     align-items: center;
     border: 10px dotted #5ea6ff
 }
+#newcollection {
+    background-color: #dc604f;
+    border: #f9f3ab dashed 10px;
+}
+#newcollection p {
+    color:#f9f3ab;
+}
+#newcollection a img{
+    width: 14vw;
+}
+#newcollection a img:hover{
+    width: 17vw;
+    transition: width .5s;
+}
 /*TOS*/
 #layout {
     margin: 20px;
@@ -170,8 +189,7 @@ body {
 }
 #images .art {
     padding: 30px;
-    width: 30%;
-    height: 100%;
+    width: 180px;
     object-fit: contain;
 }
 /*SOCIALS*/
@@ -247,7 +265,11 @@ body {
     text-decoration: none;
 }
 #cashapp {
-    width: 10vw;
+    width: 7vw;
+}
+#cashapp:hover {
+    width: 10%;
+    transition: width .5s;
 }
 #support {
     color: #f9f3ab;
@@ -264,7 +286,7 @@ body {
     ;
 }
 #links #bearhead img {
-    width: 7vw;
+    width: 5vw;
     margin: 5px;
 }
 #links #bearhead img:hover {
@@ -310,4 +332,13 @@ body {
 #misc img {
     width: 30vw;
     margin: 10px;
+}
+/*DESSERT*/
+#images .dessert {
+    padding: 30px;
+    width: 190px;
+    object-fit: contain;
+}
+#images #strawberrytanghulu {
+    width: 150px;
 }
