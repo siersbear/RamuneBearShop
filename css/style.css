@@ -146,6 +146,19 @@ body {
     width: 100vw;
     padding: 15px 5px;
 }
+#homemessage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+#homemessage h1{
+    padding: 0px 30px;
+    color:#dc5f4f;
+}
+#homemessage a img{
+    width: 30vw;
+}
 /*TOS*/
 #layout {
     margin: 20px;
@@ -182,15 +195,15 @@ body {
     text-align: center;
 }
 #images #ramune {
-    width: 14vw;
+    width: 10vw;
 }
 #images #who {
-    width: 45vw;
+    width: 15vw;
     padding-bottom: 180px;
 }
 #images .art {
     padding: 30px;
-    width: 180px;
+    width: 280px;
     object-fit: contain;
 }
 /*SOCIALS*/
@@ -342,4 +355,24 @@ body {
 }
 #images #strawberrytanghulu {
     width: 150px;
+}
+/*PATREON SHOUTOUT*/
+#patreon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#shoutouts h2{
+    color:#dc5f4f;
+}
+#supporter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#supporter img {
+    width: 7vw;
+    height: 7vw;
 }
