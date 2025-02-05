@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>new</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/logo.png"/>
+    </head>
+    <body>
+        <div id="audio">
+            <audio controls="" autoplay="" loop="" id="lowaudio">
+                <source src="sitemusic/1.mp3" type="audio/mpeg">
+            </audio>
+            <script>
+                var audio = document.getElementById("lowaudio");
+                audio.volume = 0.1;
+            </script>
+        </div>
+        <div id="newpage">
+            <a href="dessert.html">
+                <img id="dessert" src="images/ads/NEWDESSERTS.png">
+            </a>
+            <a href="keychain.html">
+                <img id="keychain" src="images/ads/NEWKEYCHAINS.png">
+            </a>
+            <a id="homebutton" href="index.html">
+                <div>home</div>
+            </a>
+        </div>
+    </body>
+</html>

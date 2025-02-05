@@ -3,172 +3,85 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Artwork</title> 
+        <title>tos</title>
         <link href="css/style.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="images/logo.png"/>
     </head>
     <body>
-        <div id="header">
-            <div id="ts-navbar">
-                <a href="index.html" id="logo">
-                    <img 
-                        src="images/logo.gif"
-                        alt="ramunebear logo"
-                    >
-                </a>
-                <a href="patreon.html">Patrons</a>
-                <a href="socials.html">Socials</a>
-                <a href="artwork.html">Artwork</a>
-                <a href="TOS.html">TOS</a>
-            </div>
-            <div id="ts-navbar-bottom">
-                <a href="pins.html">Pins</a>
-                <a href="shirts.html">Shirts</a>
-                <a href="stickers.html">Stickers</a>
-                <a href="misc.html">Misc</a>
-            </div>
+        <div id="audio">
+            <audio controls="" autoplay="" loop="" id="lowaudio">
+                <source src="sitemusic/1.mp3" type="audio/mpeg">
+            </audio>
+            <script>
+                var audio = document.getElementById("lowaudio");
+                audio.volume = 0.1;
+            </script>
         </div>
-        <div id="layout">
-            <div class="middle">
-                <h1>Terms and Conditions</h1>
-                <p>
-                    Welcome to my shop! By accessing or using my website, you agree 
-                    to comply with and be bound by the following terms and 
-                    conditions. Please read them carefully.
-                </p>
-            </div>
+        <div id="tospage">
+            <h1>Terms and Conditions</h1>
+            <p>
+                Welcome to my shop! By accessing or using my website, you agree 
+                to comply with and be bound by the following terms and 
+                conditions. Please read them carefully.</p>
+    
             <h2>1. Acceptance of Terms</h2>
             <p>
                 By using this website, you agree to these terms. If you do not 
-                agree, please do not use the site.
-            </p>
+                agree, please do not use the site.</p>
+    
             <h2>2. Changes to Terms</h2>
             <p>
                 I reserve the right to modify these terms at any time. Changes 
-                will be effective immediately upon posting. Continued use of the
-                website signifies your acceptance of the updated terms.
-            </p>
+                will be effective immediately upon posting. Continued use of 
+                the website signifies your acceptance of the updated terms.</p>
+    
             <h2>3. Intellectual Property</h2>
             <p>
                 All content on this site, including text, images, and logos, is 
-                owned by RamuneBear. Unauthorized use is prohibited.
-            </p>
+                owned by RamuneBear. Unauthorized use is prohibited.</p>
+    
             <h2>4. User Responsibilities</h2>
             <p>
-                You agree to use the website only for lawful purposes. Any 
-                misuse or unauthorized access to our systems is prohibited.
-            </p>
+                You agree to use the website only for lawful purposes. Any misuse
+                or unauthorized access to our systems is prohibited.</p>
+    
             <h2>5. Limitation of Liability</h2>
             <p>
                 RamuneBear is not responsible for any direct, indirect, or 
                 incidental damages resulting from the use or inability to use 
-                our site.
-            </p>
+                our site.</p>
+    
             <h2>6. Governing Law</h2>
             <p>
-                These terms are governed by the laws of Florida.
-                For any questions regarding these terms, please contact us at 
-                siersbear@gmail.com.
+                These terms are governed by the laws of Florida. For any 
+                questions regarding these terms, please contact me at 
+                <a href="mailto:siersbear@gmail.com">
+                    ramunebearshop@gmail.com
+                </a>
             </p>
-            <div class="middle">
-                <h1>Privacy Policy</h1>
-                <p>
-                    RamuneBear Shop values your privacy. This policy outlines 
-                    how we collect, use, and protect your personal information.
-                </p>
-            </div>
-            <h3>1. Information We Collect</h3>
-            <p>
-                This site may collect personal information such as your name, 
-                email address, and payment details when you make a purchase.
-            </p>
-            <h3>2. How We Use Your Information</h3>
-            <p>
-                To process orders and payments.
-                To respond to inquiries.
-                To send promotional materials (if you opt-in).
-            </p>
-            <h3>3. Cookies</h3>
-            <p>
-                Our website may use cookies to enhance your user experience. 
-                You can adjust your browser settings to decline cookies if 
-                preferred.
-            </p>
-            <h3>4. Third-Party Services</h3>
-            <p>
-                We may share your data with trusted third parties for processing 
-                payments or delivering services. These parties are bound by 
-                confidentiality agreements.
-            </p>
-            <h3>5. Data Security</h3>
-            <p>
-                We implement measures to protect your information from 
-                unauthorized access or disclosure.
-            </p>
-            <h3>6. Your Rights</h3>
-            <p>
-                You may request access, correction, or deletion of your personal 
-                data by contacting us at siersbear@gmail.com.
-            </p>
-            <div class="middle">
-                <h1>Refund Policy</h1>
-                <p>
-                    If you are not satisfied with your purchase, please review our 
-                    refund policy below.
-                </p>
-            </div>
-            <h3>1. Eligibility for Refunds</h3>
-            <p>
-                Refunds may be requested within 30 days of purchase. To be 
-                eligible, the item must be unused and in its original condition.
-            </p>
-            <h3>2. Non-Refundable Items</h3>
-            <p>
-                Certain items, such as stickers or notebooks, are non-refundable unless 
-                defective.
-            </p>
-            <h3>3. Refund Process</h3>
-            <p>
-                To request a refund, contact siersbear@gmail.com with your order 
-                details. Once approved, refunds will be processed within 7 days.
-                Please make sure to provide information and images explaining
-                your request for a refund.
-            </p>
-            <h3>4. Shipping Costs</h3>
-            <p>
-                Shipping costs are non-refundable.
-            </p>
-            <h3>5. Contact Information</h3>
-            <p>
-                For refund queries or assistance, please email 
-                siersbear@gmail.com.
-            </p>
+            <p id="copyright">© ramunebearshop 2025</p>
         </div>
+        <a id="homebutton2" href="index.html">
+            <div>home</div>
+        </a>
         <div id="footer">
-            <h2>Links</h2>
-            <hr>
-            <ul class="social-media">
-                <div id="support">
-                    <p>Support me through cashapp</p>
-                    <a href="https://cash.app/$starrrbeary">
-                        <img id="cashapp" src="images/cashapp.png">
-                    </a>
-                    <p>Any donation appreciated</p>
-                </div>
-                <div id="links">
-                    <li><a href="https://gofund.me/9f7abf24">GoFundMe</a></li>
-                    <li><a href="TOS.html">Terms & Conditions</a></li>
-                    <li><a href="socials.html">Social Media</a></li>
-                    <li>
-                        <a href="https://ramunebearshop.onlineweb.shop/">
-                            Shop
-                        </a>
-                    </li>
-                    <a id="bearhead" href="index.html">
-                        <img src="images/logo.png">
-                    </a>
-                </div>
-            </ul>
+            <div id="cloud1">
+                <a href="https://cash.app/$starrrbeary">cashapp</a>
+                <a href="https://www.gofundme.com/f/bringing-ramune-bear-shop-to-life?attribution_id=sl:e3191325-1a73-44a6-8d75-a9136848a1aa&utm_campaign=man_sharesheet_tip&utm_medium=customer&utm_source=copy_link">
+                    gofundme
+                </a>
+                <a href="https://ramunebearshop.onlineweb.shop/">shop site</a>
+            </div>
+            <div id="cloud3">
+                <img src="images/shoplogotext.png" width="135px">
+            </div>
+            <div id="cloud2">
+                <a href="https://www.instagram.com/ramunebearshop/">instagram</a>
+                <a href="https://patreon.com/ramunebear?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">
+                    patreon
+                </a>
+                <a href="https://www.redbubble.com/people/ramunebear/shop?artistUserName=ramunebear&collections=4169688&iaCode=all-departments&sortOrder=relevant">redbubble</a>
+            </div>
         </div>
     </body>
 </html>
