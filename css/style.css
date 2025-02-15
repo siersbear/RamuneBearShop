@@ -155,6 +155,17 @@ body a:active {
     transform: scale(1.5);
     transition: transform .5s;
 }
+#socials2 a{
+    padding: 10px;
+    text-decoration: none;
+}
+#socials2 img {
+    width: 50px;
+}
+#socials2 img:hover{
+    transform: scale(1.5);
+    transition: transform .5s;
+}
 #welcome {
     background-image: url('../images/welcome.png');
     background-size: 290px;
@@ -489,7 +500,17 @@ body a:active {
     padding: 20px;
     border-radius: 50px;
 }
-
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+}
+#productimages img{
+    width: 30vw;
+}
 
 
 
