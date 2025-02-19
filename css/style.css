@@ -289,6 +289,25 @@ body a:active {
     padding: 10px;
     font-size: 10px;
 }
+#quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#ef4842 ;
+}
+#quiz img {
+    width: 10vw;
+}
+#quiz a:hover {
+    transform: rotate(360deg);
+    transition: transform .5s;
+}
+#quiz p:hover {
+    transform: translate(0px, -10px);
+    transition: transform .5s;
+}
 /*NAVBAR*/
 #navbar {
     display: flex;
