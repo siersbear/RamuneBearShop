@@ -1,0 +1,129 @@
+body {
+  margin: 0px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #a8d4ff;
+  background-image: url("../images/background.gif");
+  background-size: 115vw;
+  background-position: top;
+  color: #474e4a;
+  cursor: url('../images/cursor.png'), auto;
+}
+body a:hover {
+  cursor: url('../images/pointer.png'), pointer;
+}
+body a:active {
+  cursor: url('../images/click.png'), auto;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.avatar-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-right: 50px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.base-layer {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  z-index: 1; 
+}
+
+.custom-layer {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  z-index: 2;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width:  1250px;
+}
+
+.option-group {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #319cfa;
+  font-size: 24px;
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.custom-btn {
+  background-color: #ffce00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 14px;
+  border-radius: 25px;
+}
+
+.custom-btn:hover {
+  background-color: #ff3336;
+  cursor: url('../images/pointer.png'), pointer;
+}
+#randomize-btn {
+  color: #fbf198;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #529af3;
+  border-radius: 50px;
+}
+
+#randomize-btn:hover {
+  background-color: #ffaa00; 
+  transition: background-color .5s;
+  cursor: url('../images/pointer.png'), pointer;
+}
+
+/*HOME BUTTON*/
+#homebutton {
+  text-decoration: none;
+  display: flex;
+  color: #fbf198;
+  align-items: center;
+  justify-content: center;
+}
+#homebutton div{
+  color: #fbf198;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: #529af3;
+  padding: 10px;
+}
+#homebutton div:hover{
+  background-color: #ef4842;
+  transition: 
+      background-color .5s
+  ;
+  cursor: url('../images/pointer.png'), pointer;
+}
+#homebutton div:active{
+  transform: scale(0.9);
+  color: #a8d4ff;
+  transition: 
+      color .5s
+  ;
+}

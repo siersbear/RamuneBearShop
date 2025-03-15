@@ -200,7 +200,29 @@ body a:active {
     text-align: center;
 }
 /*RIGHT COLUMN*/
-
+#dressup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#ef4842;
+    margin: 10px;
+}
+#dressup img {
+    width: 35vw;
+}
+#dressup h3 {
+    font-size: 10px;
+}
+#dressup a {
+    text-decoration: none;
+    color:#ef4842;
+}
+#dressup a:hover {
+    color: #319bf9;
+    transition: color .5s;
+}
 /*INFO BOX*/
 #infobox {
     background-color:#319bf9;
