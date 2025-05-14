@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="dressup.css">
 </head>
   <body>
+    <div id="audio">
+      <audio controls="" autoplay="" loop="" id="lowaudio">
+          <source src="sitemusic/2.mp3" type="audio/mpeg">
+      </audio>
+      <script>
+          var audio = document.getElementById("lowaudio");
+          audio.volume = 0.1;
+      </script>
+    </div>
     <div class="main-container">
       <div class="avatar-container">
         <img id="silhouette" class="base-layer" src="images/BODY/SILHOUETTE.png" alt="Silhouette">
