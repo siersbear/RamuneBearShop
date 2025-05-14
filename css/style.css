@@ -149,7 +149,7 @@ body a:active {
     text-decoration: none;
 }
 #socials img {
-    width: 50px;
+    width: 40px;
 }
 #socials img:hover{
     transform: scale(1.5);
