@@ -1,48 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>contact</title>
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="icon" type="image/png" href="images/logo.png"/>
-    </head>
-    <body>
-        <div id="audio">
-            <audio controls="" autoplay="" loop="" id="lowaudio">
-                <source src="sitemusic/4.mp3" type="audio/mpeg">
-            </audio>
-            <script>
-                var audio = document.getElementById("lowaudio");
-                audio.volume = 0.1;
-            </script>
-        </div>
-        <div id="contactpage">
-            <div id="content">
-                <p>For any inquiries, contact me at</p>
-                <a href="ramunebearshop@gmail.com">
-                    <p>ramunebearshop@gmail.com</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+    <style>
+        #rain-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1; /* <-- This pushes it behind everything */
+        }
+    </style>
+</head>
+<body>
+    <!-- Rain Effect Canvas -->
+    <canvas id="rain-canvas"></canvas>
+
+    <div id="audio">
+        <audio controls autoplay loop id="lowaudio">
+            <source src="sitemusic/4.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            var audio = document.getElementById("lowaudio");
+            audio.volume = 0.1;
+        </script>
+    </div>
+
+    <div id="contactpage">
+        <div id="content">
+            <p>For any inquiries, contact me at</p>
+            <a href="mailto:ramunebearshop@gmail.com">
+                <p>ramunebearshop@gmail.com</p>
+            </a>
+            <hr>
+            <p>you can also find me on</p>
+            <div id="socials2">
+                <a href="https://ramunebearshop.onlineweb.shop/">
+                    <img id="shop" src="images/cart.png">
                 </a>
-                <hr>
-                <p>you can also find me on</p>
-                <div id="socials2">
-                    <a href="https://ramunebearshop.onlineweb.shop/">
-                        <img id="shop" src="images/cart.png">
-                    </a>
-                    <a href="https://www.instagram.com/ramunebearshop/">
-                        <img id="ig" src="images/instagram.png">
-                    </a>
-                    <a href="https://www.patreon.com/ramunebear">
-                        <img id="patreon" src="images/patreon.png">
-                    </a>
-                    <a href="https://cash.app/$starrrbeary">
-                        <img id="cashapp" src="images/cashapp.png">
-                    </a>
-                </div>
-                <a id="homebutton" href="index.html">
-                    <div>home</div>
+                <a href="https://www.instagram.com/ramunebearshop/">
+                    <img id="ig" src="images/instagram.png">
+                </a>
+                <a href="https://www.patreon.com/ramunebear">
+                    <img id="patreon" src="images/patreon.png">
+                </a>
+                <a href="https://cash.app/$starrrbeary">
+                    <img id="cashapp" src="images/cashapp.png">
+                </a>
+                <a href="https://www.tiktok.com/@ramunebearshop">
+                    <img id="shop" src="images/tiktok.png">
                 </a>
             </div>
+            <a id="homebutton" href="index.html">
+                <div>home</div>
+            </a>
         </div>
-    </body>
+    </div>
+
+    <!-- Rain Effect Script -->
+    <script>
+        const canvas = document.getElementById("rain-canvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const img = new Image();
+        img.src = 'images/logo.png';
+
+        const drops = [];
+
+        for (let i = 0; i < 20; i++) {
+            drops.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * -canvas.height,
+                speed: Math.random() * 1 + 0.5,
+                size: Math.random() * 30 +20
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let d of drops) {
+                ctx.drawImage(img, d.x, d.y, d.size, d.size);
+                d.y += d.speed;
+
+                if (d.y > canvas.height) {
+                    d.y = -d.size;
+                    d.x = Math.random() * canvas.width;
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        img.onload = draw;
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
 </html>

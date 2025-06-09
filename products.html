@@ -1,40 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>products</title>
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="icon" type="image/png" href="images/logo.png"/>
-    </head>
-    <body>
-        <div id="audio">
-            <audio controls="" autoplay="" loop="" id="lowaudio">
-                <source src="sitemusic/3.mp3" type="audio/mpeg">
-            </audio>
-            <script>
-                var audio = document.getElementById("lowaudio");
-                audio.volume = 0.1;
-            </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Shop</title>
+  <style>
+    :root {
+      --bg: #a8d4ff;
+      --yellow: #fbf198;
+      --blue: #529af3;
+      --red: #ef4842;
+      --white: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: var(--bg);
+      color: var(--blue);
+    }
+
+    header {
+      background-color: var(--red);
+      color: var(--yellow);
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: var(--blue);
+      padding: 20px;
+      color: var(--yellow);
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .sidebar button {
+      display: block;
+      margin: 8px 0;
+      background: none;
+      border: none;
+      color: var(--yellow);
+      font-size: 16px;
+      text-align: left;
+      cursor: pointer;
+      padding: 5px;
+      transition: color 0.3s;
+    }
+
+    .sidebar button:hover {
+      color: var(--red);
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: var(--white);
+      border: 2px solid var(--blue);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 4px 4px 0 var(--red);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-info {
+      padding: 10px;
+    }
+
+    .product-title {
+      font-weight: bold;
+      color: var(--blue);
+      margin: 5px 0;
+    }
+
+    .product-price {
+      color: var(--red);
+      margin-bottom: 5px;
+    }
+
+    .badge {
+      background-color: var(--yellow);
+      color: var(--red);
+      font-weight: bold;
+      font-size: 12px;
+      padding: 4px 6px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    !CLOSED FOR GOBLIN MARKET - JUNE 14!
+  </header>
+
+  <div class="container">
+    <!-- Sidebar with Filter Buttons -->
+    <aside class="sidebar">
+      <h2>PRODUCTS</h2>
+      <button onclick="filterProducts('all')">All Products</button>
+      <button onclick="filterProducts('stickers')">Stickers</button>
+      <button onclick="filterProducts('shirts')">Shirts</button>
+      <button onclick="filterProducts('pins')">Pins</button>
+      <button onclick="filterProducts('charms')">Charms</button>
+    </aside>
+
+    <!-- Product Grid -->
+    <main class="main" id="product-grid">
+      <div class="product" data-category="pins">
+        <img src="products/BLUEBERRYPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Blueberry Pin</div>
+          <div class="product-price">$2.00</div>
+          <div class="badge">COMING SOON</div>
         </div>
-        <div id="products">
-            <div id="productimages">
-                <a href="https://ramunebearshop.onlineweb.shop/product/keep-on-loving-music-pin">
-                    <img src="images/products/kolm.png">
-                </a>
-                <a href="https://ramunebearshop.onlineweb.shop/product/you-are-loved-badge">
-                    <img src="images/products/yal.png">
-                </a>
-                <a href="https://ramunebearshop.onlineweb.shop/product/ramune-bear-pin">
-                    <img src="images/products/peekabear.png">
-                </a>
-                <a href="https://ramunebearshop.onlineweb.shop/product/ramunebear-star-pin">
-                    <img src="images/products/Starpin.png">
-                </a>
-                <a href="https://ramunebearshop.onlineweb.shop/product/bear-mask-badge">
-                    <img src="images/products/peekabearbadge.png">
-                </a>
-            </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/blueberrysticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Blueberry Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
         </div>
-    </body>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/breadsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Bear Bread Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/cakesticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Cake Bear Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/COCONUTPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Coconut Pin</div>
+          <div class="product-price">$2.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/donutsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Bear Donut Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/grape.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Grape Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/icecreamsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Ice Cream Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/IRRITATEDSTICKER.gif" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Irritated Mini Sticker</div>
+          <div class="product-price">$0.50</div>
+        </div>
+      </div>
+      <div class="product" data-category="charms">
+        <img src="products/KEYCHAIN.png" alt="Charm">
+        <div class="product-info">
+          <div class="product-title">RamuneBear Keychain Charm</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">SOLD OUT</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/KOLMPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Keep On Loving Music Pin</div>
+          <div class="product-price">$3.00</div>
+        </div>
+      </div>
+      <div class="product" data-category="shirts">
+        <img src="products/KOLMSHIRT.png" alt="Shirt">
+        <div class="product-info">
+          <div class="product-title">Keep On Loving Music Shirt</div>
+          <div class="product-price">$20.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/kolmsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Keep On Loving Music Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/kolmstickerholo.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Keep On Loving Music Sticker (Holographic)</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/LYCHEEPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Lychee Pin</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/macaroonsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Macaroon Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="shirts">
+        <img src="products/MANGASHIRT.png" alt="Shirt">
+        <div class="product-info">
+          <div class="product-title">RamuneBear Manga T-shirt</div>
+          <div class="product-price">$20.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/MELONPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Melon Pin</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/melonsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Melon Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/mindblownsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Mindblown Sticker</div>
+          <div class="product-price">$1.00</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/ORANGEPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Orange Pin</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">SOLD OUT</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/orangesticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Orange Sticker</div>
+          <div class="product-price">$0.50</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/originalsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Original Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="badges">
+        <img src="products/PAB Badge.png" alt="Badge">
+        <div class="product-info">
+          <div class="product-title">Peek-A-Bear Badge</div>
+          <div class="product-price">$3.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/PABPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Peek-A-Bear Pin</div>
+          <div class="product-price">$2.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="shirts">
+        <img src="products/PABSHIRT.png" alt="Shirt">
+        <div class="product-info">
+          <div class="product-title">Peek-A-Bear Shirt</div>
+          <div class="product-price">$20.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/pabsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Peek-A-Bear Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/pabstickerholo.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Peek-A-Bear Sticker (Holographic)</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/PEACHPIN.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Peach Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/PINEAPPLEPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Pineapple Pin</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/pineapplesticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Pineapple Sticker</div>
+          <div class="product-price">$0.50</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/ramunebearsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">RamuneBear Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">SOLD OUT</div>
+        </div>
+      </div>
+      <div class="product" data-category="shirts">
+        <img src="products/RAMUNERIDERSHIRT.png" alt="Shirt">
+        <div class="product-info">
+          <div class="product-title">Ramunerider Shirt</div>
+          <div class="product-price">$20.00</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/RAMUNERIDERSTICKER.gif" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Ramunerider Mini Sticker (Glitter)</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/RAMUNERIDERSTICKERR.gif" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Ramunerider Mini Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/SAKURAPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Sakura Pin</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/sakurasticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Sakura Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/star ramunebear sticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Ramunebear Star Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/STARPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">RamuneBear Star Pin</div>
+          <div class="product-price">$2.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/strawberry.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Strawberry Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/STRAWBERRYPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Strawberry Pin</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">COMING SOON</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/tartsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Tart Sticker</div>
+          <div class="product-price">$1.00</div>
+        </div>
+      </div>
+      <div class="product" data-category="pins">
+        <img src="products/WATERMELONPIN.png" alt="Pin">
+        <div class="product-info">
+          <div class="product-title">Watermelon Sticker</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">SOLD OUT</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/watermelonsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Watermelon Sticker</div>
+          <div class="product-price">$0.50</div>
+        </div>
+      </div>
+            <div class="product" data-category="badges">
+        <img src="products/YAL BADGE.png" alt="Badge">
+        <div class="product-info">
+          <div class="product-title">You are Loved Badge</div>
+          <div class="product-price">$3.00</div>
+          <div class="badge">SOLD OUT</div>
+        </div>
+      </div>
+      <div class="product" data-category="stickers">
+        <img src="products/yalsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">You are Loved Sticker</div>
+          <div class="product-price">$1.00</div>
+        </div>
+      </div>
+            <div class="product" data-category="stickers">
+        <img src="products/yalstickerholo.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">You are Loved Sticker (Holographic)</div>
+          <div class="product-price">$1.00</div>
+          <div class="badge">SOLD OUT</div>
+        </div>
+      </div>
+            <div class="product" data-category="stickers">
+        <img src="products/yogurtsticker.png" alt="Sticker">
+        <div class="product-info">
+          <div class="product-title">Yogurt Sticker</div>
+          <div class="product-price">$0.50</div>
+          <div class="badge">SOLD OUT</div>
+        </div>
+      </div>
+      <!-- Add more products as needed -->
+    </main>
+  </div>
+
+  <script>
+    function filterProducts(category) {
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        const productCategory = product.getAttribute('data-category');
+        if (category === 'all' || productCategory === category) {
+          product.style.display = 'flex';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
 </html>
+
