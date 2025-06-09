@@ -20,7 +20,9 @@
       --red: #ef4842;
       --white: #ffffff;
     }
-
+    a {
+      text-decoration: none;
+    }
     body {
       margin: 0;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -119,7 +121,6 @@
       display: inline-block;
       margin-top: 5px;
     }
-
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -146,6 +147,10 @@
       <button onclick="filterProducts('shirts')">Shirts</button>
       <button onclick="filterProducts('pins')">Pins</button>
       <button onclick="filterProducts('charms')">Charms</button>
+      <hr>
+      <a href="tos.html">
+        <button onclick="filterProducts('tos')">TOS</button>
+      </a>
     </aside>
 
     <!-- Product Grid -->
@@ -502,7 +507,7 @@
           <div class="badge">COMING SOON</div>
         </div>
       </div>
-            <div class="product" data-category="badges">
+      <div class="product" data-category="badges">
         <img src="products/YAL BADGE.png" alt="Badge">
         <div class="product-info">
           <div class="product-title">You are Loved Badge</div>
@@ -518,7 +523,7 @@
           <div class="badge">COMING SOON</div>
         </div>
       </div>
-            <div class="product" data-category="stickers">
+      <div class="product" data-category="stickers">
         <img src="products/yalstickerholo.png" alt="Sticker">
         <div class="product-info">
           <div class="product-title">You are Loved Sticker (Holographic)</div>
@@ -526,7 +531,7 @@
           <div class="badge">COMING SOON</div>
         </div>
       </div>
-            <div class="product" data-category="stickers">
+      <div class="product" data-category="stickers">
         <img src="products/yogurtsticker.png" alt="Sticker">
         <div class="product-info">
           <div class="product-title">Yogurt Sticker</div>
